@@ -1,0 +1,108 @@
+{
+  "$id": "1",
+  "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+  "Strategy": {
+    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+  },
+  "Name": "PUESTA EN ESTACIÓN",
+  "Conditions": {
+    "$id": "2",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+    "$values": []
+  },
+  "IsExpanded": true,
+  "Items": {
+    "$id": "3",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+    "$values": [
+      {
+        "$id": "4",
+        "$type": "NINA.Sequencer.SequenceItem.Telescope.UnparkScope, NINA.Sequencer",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "5",
+        "$type": "NINA.Plugins.PolarAlignment.Instructions.PolarAlignment, NINA.Plugins.PolarAlignment",
+        "Coordinates": {
+          "$id": "6",
+          "$type": "NINA.Astrometry.InputTopocentricCoordinates, NINA.Astrometry",
+          "AzDegrees": 1,
+          "AzMinutes": 0,
+          "AzSeconds": 0.0,
+          "AltDegrees": 41,
+          "AltMinutes": 30,
+          "AltSeconds": 0.0
+        },
+        "MoveRate": 3.0,
+        "SearchRadius": 30.0,
+        "EastDirection": true,
+        "TargetDistance": 10,
+        "ManualMode": false,
+        "StartFromCurrentPosition": false,
+        "AlignmentTolerance": 3.0,
+        "Filter": {
+          "$id": "7",
+          "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+          "_name": "L",
+          "_focusOffset": 0,
+          "_position": 0,
+          "_autoFocusExposureTime": -1.0,
+          "_autoFocusFilter": true,
+          "FlatWizardFilterSettings": {
+            "$id": "8",
+            "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+            "FlatWizardMode": 0,
+            "HistogramMeanTarget": 0.5,
+            "HistogramTolerance": 0.1,
+            "MaxFlatExposureTime": 30.0,
+            "MinFlatExposureTime": 0.01,
+            "MaxAbsoluteFlatDeviceBrightness": 255,
+            "MinAbsoluteFlatDeviceBrightness": 0,
+            "Gain": -1,
+            "Offset": -1,
+            "Binning": {
+              "$id": "9",
+              "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+              "X": 1,
+              "Y": 1
+            }
+          },
+          "_autoFocusBinning": {
+            "$id": "10",
+            "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+            "X": 1,
+            "Y": 1
+          },
+          "_autoFocusGain": -1,
+          "_autoFocusOffset": -1
+        },
+        "ExposureTime": 4.0,
+        "Gain": -1,
+        "Offset": -1,
+        "Binning": {
+          "$id": "11",
+          "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+          "X": 1,
+          "Y": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      }
+    ]
+  },
+  "Triggers": {
+    "$id": "12",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+    "$values": []
+  },
+  "Parent": null,
+  "ErrorBehavior": 0,
+  "Attempts": 1
+}
